@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --basicBlue : #0f6874;
+  --basicWhite : #eeeeee;
+}
+
+* {
+  padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Quicksand', 'Roboto', sans-serif;
+	background: var(--basicBlue);
+}
+
+/* Style for Main Part */
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 15px auto;
+  margin-bottom: 5px;
+}
+
+.main-child {
+  margin-top: 10rem;
+  max-width: 300px;
+	width: 100%;
+}
+
+.calculator {
+  border-radius: 1rem;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.5);
+}
+
+.calculator .screen {
+  background: #5b4949cf;
+  padding: 1rem;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.calculator .output-screen {
+  width: 100%;
+  background: #3B3B3B;
+  border-radius: .725rem;
+  padding: .650rem;
+  box-shadow: inset 2px 3px 5px 0px rgba(0,0,0,0.7);
+  outline: none;
+}
+
+.output-screen output {
+  display: block;
+  background: transparent;
+  width: 100%;
+}
+
+output#user-input {
+  font-size: 1.325rem;
+  font-weight: 400;
+  text-align: right;
+  color: var(--basicWhite);
+}
+
+output#result {
+  font-size: 1.625rem;
+  font-weight: 600;
+  text-align: right;
+  color: var(--basicWhite);
+}
+
+.calculator .buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 100%;
+  grid-gap: .125rem;
+  padding: 1rem;
+  background: #3B3B3B;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+button {
+  font-size: 1.325rem;
+  padding: 1rem 0;
+  font-weight: 700;
+  background: #616161;
+  border: 0px solid transparent;
+  outline: none;
+  text-decoration: none;
+  /* border-radius: 100%; */
+  box-shadow: 4px 5px 5px 0px rgba(0,0,0,0.5);
+  color: #DFDFDF;
+  cursor: pointer;
+  transition: all .15s ease-in-out;
+}
+
+button.equals {
+  grid-column: 3/5;
+  /* border-radius: 2.5rem; */
+}
+
+button.equals:hover {
+  background: rgb(90, 154, 104);
+  color: var(--basicWhite);
+  transform: translateY(-0.2rem);
+}
+
+button.digits:hover,
+button.decimal:hover {
+	background: #bdbdbd;
+	color: #212121;
+	transform: translateY(-0.2rem);
+}
+
+button.operators:hover {
+	background: rgb(181, 211, 62);
+	color: #000;
+	transform: translateY(-0.2rem);
+}
+
+button.all-clear:hover,
+button.clear:hover {
+	background: lightcoral;
+	color: #000;
+	transform: translateY(-0.2rem);
+}
+
+button.digits:active,
+button.operators:active,
+button.decimal:active,
+button.allclear:active,
+button.clear:active,
+button.equals:active {
+	transform: translateY(0rem);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Style for footer */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.fa-github {
+  color: #222121cf;
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
+}
